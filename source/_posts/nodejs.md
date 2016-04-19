@@ -18,9 +18,11 @@ tags: nodejs
 	ln -s/root/node-v4.2.1-linux-x64/bin/node /usr/local/bin/node
 	ln -s/root/node-v4.2.1-linux-x64/bin/npm /usr/local/bin/npm
 ### **Git remember password**
-设置记住密码（默认15分钟）
-	git config --global credential.helper cache
-设置记住密码（时间自定义）# 一小时有效期
-	git config credential.helper 'cache --timeout=3600'
-设置记住密码（长期有效）
-	git config --global credential.helper store
+```
+#设置记住密码（默认15分钟）
+git config --global credential.helper cache
+#设置记住密码（时间自定义） 一小时有效期
+git config credential.helper 'cache --timeout=3600'
+#设置记住密码（长期有效）
+git config --global credential.helper store
+```
