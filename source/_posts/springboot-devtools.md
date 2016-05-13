@@ -1,7 +1,7 @@
 ---
 title: spring配置springboot-devtools来实现热启动
 date: 2016-05-13 14:26:49
-tags: [springboot, devtools ,java, ubunut ,linux]
+tags: [springboot, devtools ,java, ubuntu ,linux]
 ---
 
 ```
