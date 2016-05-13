@@ -2,16 +2,16 @@
 menu:
   主页: /
   所有文章: /archives
-  # 随笔: /tags/随笔
+  linux: /tags/linux
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
-  zhihu: "#"
+  github: "http://bigsuperangel.github.io"
+  #weibo: "#"
+  #rss: "#"
+  #zhihu: "#"
   #douban: "#"
-  #mail: "#"
+  mail: "bigsuperangel@gmail.com"
   #facebook: "#"
   #google: "#"
   #twitter: "#"
@@ -47,7 +47,7 @@ tagcloud: true
 
 #是否开启友情链接
 #不开启——
-#friends: false
+friends: false
 #开启——
 friends:
   奥巴马的博客: http://localhost:4000/
@@ -61,4 +61,4 @@ friends:
 #不开启——
 #aboutme: false
 #开启——
-aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…
+aboutme: 知行合一
