@@ -4,7 +4,7 @@ date: 2016-06-06 15:58:37
 tags: [linux,locate,find,grep]
 ---
 
-1. locate 
+### 一、locate 
 
 ```
 /etc/updatedb.conf #locate配置文件筛选规则
@@ -13,19 +13,19 @@ locate file
 updatedb #更新数据库，以用来搜索最新的文件
 ```
 
-2. whereis
+### 二、whereis
 
 ```
 whereis -b -m 
 ```
 
-3. which
+### 三、which
 
 ```
 which ll  #会搜索文件别名
 ```
 
-4. find
+### 四、find
 
 ```
 find / -name install.log
@@ -50,7 +50,7 @@ find /etc -size +20k -a -size -50k -exec ls -lh {} \
 
 ```
 
-5. grep 
+### 五、grep 
 
 ```
 grep -i #不区别大小写
