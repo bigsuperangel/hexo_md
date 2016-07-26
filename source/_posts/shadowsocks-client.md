@@ -8,7 +8,7 @@ tags: [shadowsocks,linux,ubuntu]
 
 ##### 一、pip 安装
 
-1. 安装python库
+###### 1. 安装python库
 
 ```
 apt-get update
@@ -17,7 +17,7 @@ python-setuptools m2crypto
 pip install shadowsocks
 ```
 
-2. 启动shadowsocks
+####### 2. 启动shadowsocks
 
 A. 命令行启动
  
