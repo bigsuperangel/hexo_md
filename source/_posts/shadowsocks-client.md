@@ -4,7 +4,7 @@ date: 2016-07-26 10:17:24
 tags: [shadowsocks,linux,ubuntu]
 ---
 
-### ubuntu 安装 shadowsocks
+> ubuntu 安装 shadowsocks
 
 ##### 一、pip 安装
 
