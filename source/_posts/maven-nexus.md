@@ -8,11 +8,17 @@ tags: [maven,nexus,java]
 
 2. 配置maven中settings.xml文件的servers节点，可以发布jar包到nexus
 
-        <server>
-                <id>nexus</id>
-                <username>admin</username>
-                <password>admin123</password>
-        </server>
+    <server>
+      <id>nexus-releases</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+   
+    <server>
+      <id>nexus-snapshots</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
 
 ３. 配置pom.xml文件
 
@@ -46,12 +52,16 @@ tags: [maven,nexus,java]
 		</pluginRepository>
 	</pluginRepositories>
 
-       <distributionManagement>
-		<repository>
-			<id>nexus</id>
-			<name>maven-snapshots</name>
-			<url>http://192.168.0.114:8081/repository/maven-releases/</url>
-		</repository>
-	</distributionManagement>
-
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>maven-releases</name>
+            <url>http://192.168.0.114:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>http://192.168.0.114:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
