@@ -1,4 +1,0 @@
-[submodule "themes/jacman"]
-	path = themes/jacman
-	url = https://github.com/bigsuperangel/jacman.git
-	branch = jacman
