@@ -54,7 +54,8 @@ Host github.com
 ## 3. linux互信
 
 ```
-ssh-copy-id -i id_rsa root@host
+ssh-copy-id -i id_rsa.pub root@host
+ssh-copy-id -i id_rsa.pub -p port root@host
 ```
 
 ## 4. 相关问题
