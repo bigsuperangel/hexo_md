@@ -17,3 +17,19 @@ Query OK, 0 rows affected, 1 warning (0.04 sec)
 mysql> flush privileges; 
 Query OK, 0 rows affected (0.00 sec)
 ```
+
+`2. ` docker tomcat 配置
+
+```
+# tomcat8 给内网服务器使用
+docker run --name tomcat8 -d \
+	-v ~/web/tomcat8/webapps:/usr/local/tomcat/webapps \
+	-v ~/web/tomcat8/logs:/usr/local/tomcat/logs \
+	-v /etc/localtime:/etc/localtime:ro \
+	-e TZ="Asia/Shanghai" \
+	-p 8080:8080 tomcat:8.0
+
+docker logs --tail=100 -f tomcat8
+docker container stop tomcat8
+docker container start tomcat8
+```
