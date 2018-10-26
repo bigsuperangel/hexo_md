@@ -23,6 +23,8 @@ ssh -T git@git.oschina.net
 ## 2. 配置多个git仓库
 
 ```
+$ touch config
+
 # window 与 linux 使用socks5代理有区别,一个用connect ,一个用nc
 
 linux:
