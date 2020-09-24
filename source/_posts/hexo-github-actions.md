@@ -1,7 +1,7 @@
 ---
 title: github actions 自动部署 hexo 
 date: 2020-09-24 11:28:42
-tags: [hexo,deploy]
+tags: [hexo,actions]
 ---
 
 1. workflow yaml
