@@ -1,0 +1,73 @@
+---
+title: github actions 自动部署 hexo 
+date: 2020-09-24 11:28:42
+tags: [hexo,deploy]
+---
+
+1. workflow yaml
+
+```
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+env:
+  GIT_USER: bigsuperangel
+  GIT_EMAIL: bigsuperangel@gmail.com
+  THEME_REPO: bigsuperangel/jacman
+  THEME_BRANCH: master
+  DEPLOY_REPO: bigsuperangel/bigsuperangel.github.io
+  DEPLOY_BRANCH: master
+
+jobs:
+  build:
+    name: Build on node ${{ matrix.node_version }} and ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node_version: [12.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Checkout theme repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.THEME_REPO }}
+          ref: ${{ env.THEME_BRANCH }}
+          path: themes/jacman
+      - name: Checkout deploy repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.DEPLOY_REPO }}
+          ref: ${{ env.DEPLOY_BRANCH }}
+          path: .deploy_git
+
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node_version }}
+
+      - name: Configuration environment
+        env:
+          HEXO_DEPLOY_PRI: ${{secrets.HEXO_DEPLOY_PRI}}
+        run: |
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          mkdir -p ~/.ssh/
+          echo "$HEXO_DEPLOY_PRI" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          git config --global user.name $GIT_USER
+          git config --global user.email $GIT_EMAIL
+          npm install hexo-cli -g
+          npm install
+          
+      - name: Install dependencies
+        run: |
+          hexo clean
+          hexo d
+```
