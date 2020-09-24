@@ -70,9 +70,3 @@ theme: jacman
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  repo: 
-        github: git@github.com:bigsuperangel/bigsuperangel.github.io.git,master
-        gitee:  git@gitee.com:bigsuperyu/bigsuperyu.git,master
-
