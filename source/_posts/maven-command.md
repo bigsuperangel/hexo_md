@@ -15,6 +15,9 @@ java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
 ##　ignore test
 mvn install -Dmaven.test.skip=true
 
+## 按指定文件指定环境打包
+mvn -B package --file pom_github.xml -P profile -Dmaven.test.skip=true
+
 mvn dependency:tree
 mvn install -X
 ```
