@@ -61,7 +61,3 @@ jobs:
         run: |
           hexo clean
           hexo d
-
-      - name: Deploy hexo
-        run: |
-          npm run deploy
