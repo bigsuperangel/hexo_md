@@ -1,7 +1,7 @@
 ---
-title: github actions maven打包部署
+title: maven github-actions publish
 date: 2020-09-24 16:36:24
-tags: [actions,maven,java]
+tags: [actions,maven,java,github]
 ---
 
 ## sample
@@ -48,7 +48,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script: ls -al
-    
-
-
+   
 ```
