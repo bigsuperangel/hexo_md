@@ -56,7 +56,9 @@ ___
 
 电脑维护：[Dism](http://124.222.34.15:5244/123/soft/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/Dism++10.1.1000.100_2d2bf466baca088c4b35248f5a7316f4e00cac0b.zip)  [geek](http://124.222.34.15:5244/123/soft/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/geek.zip)（支持优化加速、驱动管理、杀毒防护和应用市场等功能）  
 杀毒安全：[火绒](https://www.huorong.cn/)（支持病毒查杀、电脑清理、弹窗拦截等功能）  
+启动项修复: [EasyBCD](http://124.222.34.15:5244/d/123/system/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7/EasyBCD2.4.exe)
+系统测试:  [aida64](http://124.222.34.15:5244/d/123/system/%E7%B3%BB%E7%BB%9F%E6%A3%80%E6%B5%8B/aida64extreme670.zip)
 
 ## 远程控制
 ___
-远程连接：[ToDesk](https://img.keepway.ga/ShareX/2022/11/ToDesk4.2.9.exe)
+远程连接：[Frp_window](https://ghproxy.com/https://github.com/fatedier/frp/releases/download/v0.48.0/frp_0.48.0_windows_amd64.zip) [Frp_Linux](https://ghproxy.com/https://github.com/fatedier/frp/releases/download/v0.48.0/frp_0.48.0_linux_amd64.tar.gz)
